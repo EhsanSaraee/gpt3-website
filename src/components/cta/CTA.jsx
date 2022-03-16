@@ -1,6 +1,6 @@
 const CTA = () => {
   return ( 
-    <></>
+    <>CTA</>
    );
 }
  

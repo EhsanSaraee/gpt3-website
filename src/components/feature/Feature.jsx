@@ -1,6 +1,6 @@
 const Feature = () => {
   return ( 
-    <></>
+    <>Feature</>
    );
 }
  

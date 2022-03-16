@@ -11,7 +11,7 @@ import {
 
 const App = () => {
    return (
-      <section className="App">
+      <>
          <div className="gradient__bg">
             <Navbar />
             <Header />
@@ -23,7 +23,7 @@ const App = () => {
          <CTA />
          <Blog />
          <Footer />
-      </section>
+      </>
    );
 };
 

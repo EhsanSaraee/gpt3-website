@@ -1,6 +1,6 @@
 const WhatGPT3 = () => {
   return ( 
-    <></>
+    <>WhatGPT3</>
    );
 }
  

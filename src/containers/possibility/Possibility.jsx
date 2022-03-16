@@ -1,6 +1,6 @@
 const Possibility = () => {
   return ( 
-    <></>
+    <>Possibility</>
    );
 }
  
