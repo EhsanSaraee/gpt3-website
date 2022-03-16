@@ -1,3 +1,18 @@
+// components
+@use 'components/article/article';
+@use 'components/brand/brand';
+@use 'components/cta/cta';
+@use 'components/feature/feature';
+@use 'components/navbar/navbar';
+
+// containers
+@use 'containers/blog/blog';
+@use 'containers/features/features';
+@use 'containers/footer/footer';
+@use 'containers/header/header';
+@use 'containers/possibility/possibility';
+@use 'containers/whatGPT3/whatGTP3';
+
 * {
    padding: 0;
    margin: 0;
