@@ -1,0 +1,139 @@
+@use '../../variables';
+
+@mixin text {
+   color: #fff;
+   font-family: variables.$fontFamily;
+   font-size: 18px;
+   font-weight: 500;
+   line-height: 25px;
+   text-transform: capitalize;
+   margin: 0 1rem;
+   cursor: pointer;
+}
+
+@mixin btn {
+   padding: 0.5rem 1rem;
+   color: #fff;
+   background: #ff4820;
+   font-family: variables.$fontFamily;
+   font-size: 18px;
+   font-weight: 500;
+   line-height: 25px;
+   border: none;
+   outline: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.gpt3__navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 2rem 6rem;
+
+   .gpt3__navbar-links {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: flex-start;
+
+      .gpt3__navbar-links_logo {
+         margin-right: 2rem;
+
+         img {
+            width: 62.56px;
+            height: 16.02px;
+         }
+      }
+
+      .gpt3__navbar-links_container {
+         display: flex;
+         flex-direction: row;
+
+         p {
+            @include text;
+         }
+
+         @media screen and (max-width: 1050px) {
+            display: none;
+         }
+      }
+   }
+
+   .gpt3__navbar-sign {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      p {
+         @include text;
+      }
+
+      button {
+         @include btn;
+      }
+
+      @media screen and (max-width: 550px) {
+         display: none;
+      }
+   }
+
+   .gpt3__navbar-menu {
+      margin-left: 1rem;
+      display: none;
+      position: relative;
+
+      svg {
+         cursor: pointer;
+      }
+
+      .gpt3__navbar-menu_container {
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-end;
+         align-items: flex-end;
+         text-align: end;
+         background: variables.$colorFooter;
+         padding: 2rem;
+         position: absolute;
+         right: 0;
+         top: 40px;
+         margin-top: 1rem;
+         min-width: 210px;
+         border-radius: 5px;
+         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+
+         p {
+            @include text;
+         }
+
+         button {
+            @include btn;
+         }
+
+         .gpt3__navbar-menu_container-links-sign {
+            display: none;
+
+            @media screen and (max-width: 550px) {
+               display: block;
+            }
+         }
+
+         @media screen and (max-width: 550px) {
+            top: 20px;
+         }
+      }
+
+      @media screen and (max-width: 1050px) {
+         display: flex;
+      }
+   }
+
+   @media screen and (max-width: 700px) {
+      padding: 2rem 4rem;
+   }
+
+   @media screen and (max-width: 550px) {
+      padding: 2rem;
+   }
+}
