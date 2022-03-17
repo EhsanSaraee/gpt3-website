@@ -1,0 +1,59 @@
+@use '../../variables';
+
+.gpt3__features-container__feature {
+   width: 100%;
+   display: flex;
+   align-items: flex-start;
+   justify-content: space-between;
+   margin: 1rem;
+
+   .gpt3__features-container__feature-title {
+      margin-right: 2rem;
+      flex: 1;
+      max-width: 180px;
+
+      h1 {
+         font-family: variables.$fontFamily;
+         font-size: 18px;
+         line-height: 24px;
+         font-weight: 800;
+         letter-spacing: -0.04em;
+         color: #fff;
+
+         @media screen and (max-width: 550px) {
+            font-size: 14px;
+            line-height: 22px;
+         }
+      }
+      div {
+         width: 38px;
+         height: 3px;
+         background: variables.$gradientBar;
+         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+         margin-bottom: 0.25rem;
+      }
+   }
+
+   .gpt3__features-container__feature-text {
+      display: flex;
+      flex: 2;
+      max-width: 390px;
+
+      p {
+         font-family: variables.$fontFamily;
+         color: variables.$colorText;
+         font-size: 14px;
+         line-height: 24px;
+         font-weight: 500;
+
+         @media screen and (max-width: 550px) {
+            font-size: 12px;
+            line-height: 20px;
+         }
+      }
+   }
+
+   @media screen and (max-width: 550px) {
+      margin: 1rem 0;
+   }
+}
