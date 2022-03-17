@@ -1,0 +1,158 @@
+@use '../../variables';
+
+@mixin normalText {
+   font-family: variables.$fontFamily;
+   font-size: 20px;
+   line-height: 27px;
+}
+
+.gpt3__header {
+   display: flex;
+
+   .gpt3__header-content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      align-items: flex-start;
+      justify-content: center;
+      margin-right: 5rem;
+
+      h1 {
+         font-family: variables.$fontFamily;
+         font-size: 62px;
+         font-weight: 800;
+         line-height: 75px;
+         letter-spacing: -0.04em;
+
+         @media screen and (max-width: 650px) {
+            font-size: 48px;
+            line-height: 60px;
+         }
+
+         @media screen and (max-width: 490px) {
+            font-size: 36px;
+            line-height: 48px;
+         }
+      }
+
+      p {
+         @include normalText;
+         color: variables.$colorText;
+         margin-top: 1.5rem;
+
+         @media screen and (max-width: 650px) {
+            font-size: 16px;
+            line-height: 24px;
+         }
+
+         @media screen and (max-width: 490px) {
+            font-size: 14px;
+            line-height: 24px;
+         }
+      }
+
+      .gpt3__header-content__input {
+         display: flex;
+         width: 100%;
+         margin: 2rem 0 1rem;
+
+         input {
+            flex: 2;
+            width: 100%;
+            min-height: 50px;
+            @include normalText;
+            background: variables.$colorFooter;
+            border: 2px solid variables.$colorFooter;
+            padding: 0 1rem;
+            outline: none;
+            color: #fff;
+            border-radius: 0 5px 5px 0;
+
+            @media screen and (max-width: 650px) {
+               font-size: 16px;
+               line-height: 24px;
+            }
+
+            @media screen and (max-width: 490px) {
+               font-size: 12px;
+               line-height: 16px;
+            }
+         }
+
+         button {
+            @include normalText;
+            flex: 0.6;
+            width: 100%;
+            min-height: 50px;
+            background: #ff4820;
+            font-weight: bold;
+            color: #fff;
+            cursor: pointer;
+            outline: none;
+            padding: 0 1rem;
+            border-radius: 0 5px 5px 0;
+
+            @media screen and (max-width: 650px) {
+               font-size: 16px;
+               line-height: 24px;
+            }
+
+            @media screen and (max-width: 490px) {
+               font-size: 12px;
+               line-height: 16px;
+            }
+         }
+      }
+
+      .gpt3__header-content__people {
+         width: 100%;
+         display: flex;
+         justify-content: flex-start;
+         align-items: center;
+         margin-top: 2rem;
+
+         img {
+            width: 181.79px;
+            height: 38px;
+         }
+
+         p {
+            margin: 0 0 0 1rem;
+            font-family: variables.$fontFamily;
+            font-size: 12px;
+            line-height: 38px;
+            font-weight: 500;
+            color: #fff;
+            text-align: center;
+
+            @media screen and (max-width: 650px) {
+               margin: 0;
+            }
+         }
+
+         @media screen and (max-width: 650px) {
+            flex-direction: column;
+         }
+      }
+
+      @media screen and (max-width: 1050px) {
+         margin: 0 0 3rem;
+      }
+   }
+
+   .gpt3__header-image {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+         width: 100%;
+         height: 100%;
+      }
+   }
+
+   @media screen and (max-width: 1050px) {
+      flex-direction: column;
+   }
+}
