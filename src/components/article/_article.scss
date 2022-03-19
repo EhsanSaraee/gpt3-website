@@ -1,0 +1,55 @@
+@use '../../variables';
+
+@mixin colorfulContainer {
+   width: 100%;
+   height: 100%;
+   background: variables.$colorFooter;
+}
+
+.gpt3__blog-container_article {
+   @include colorfulContainer;
+   display: flex;
+   flex-direction: column;
+
+   .gpt3__blog-container_article-image {
+      @include colorfulContainer;
+
+      img {
+         width: 100%;
+         height: 100%;
+      }
+   }
+
+   .gpt3__blog-container_article-content {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      height: 100%;
+      padding: 1rem 1.5rem;
+
+      p {
+         font-family: variables.$fontFamily;
+         color: #fff;
+         font-size: 12px;
+         line-height: 35px;
+         font-weight: bold;
+
+         &:last-child {
+            cursor: pointer;
+         }
+      }
+
+      h3 {
+         font-family: variables.$fontFamily;
+         color: #fff;
+         font-size: 25px;
+         line-height: 30px;
+         font-weight: 800;
+
+         @media screen and (max-width: 550px) {
+            font-size: 18px;
+            line-height: 25p;
+         }
+      }
+   }
+}
