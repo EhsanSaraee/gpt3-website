@@ -1,0 +1,74 @@
+@use '../../variables';
+
+.gpt3__cta {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 2rem;
+   margin: 4rem;
+   border-radius: 1rem;
+   background: variables.$gradientBar;
+
+   .gpt3__cta-content {
+      p {
+         font-family: variables.$fontFamily;
+         font-size: 12px;
+         line-height: 30px;
+         font-weight: 500;
+         color: #0e0e0e;
+      }
+
+      h3 {
+         font-family: variables.$fontFamily;
+         font-size: 24px;
+         line-height: 45px;
+         font-weight: 800;
+         color: #000;
+
+         @media screen and (max-width: 550px) {
+            font-size: 18px;
+            line-height: 32px;
+         }
+      }
+   }
+
+   .gpt3__cta-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 2rem;
+
+      button {
+         background: #000;
+         color: #fff;
+         border-radius: 40px;
+         font-family: variables.$fontFamily;
+         font-size: 18px;
+         line-height: 30px;
+         font-weight: bold;
+         padding: 0.5rem 1rem;
+         min-width: 150px;
+         border: none;
+         outline: none;
+         cursor: pointer;
+
+         @media screen and (max-width: 550px) {
+            font-size: 14px;
+            line-height: 28px;
+         }
+      }
+
+      @media screen and (max-width: 650px) {
+         margin: 2rem 0 0;
+      }
+   }
+
+   @media screen and (max-width: 650px) {
+      flex-direction: column;
+   }
+
+   @media screen and (max-width: 550px) {
+      flex-direction: column;
+      margin: 4rem 2rem;
+   }
+}
